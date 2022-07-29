@@ -155,5 +155,80 @@ describe('calculadora') do
         expect(calculadora.subtracao(-5.0, -6.5)).to eq 1.5
     end
 
+#Multiplicação
 
+    it('Deve multiplicar dois números inteiros positivos.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5, 6)).to eq 30
+    end
+
+    it('Deve multiplicar dois números inteiros negativos.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(-5, -6)).to eq 30
+    end
+
+    it('Deve multiplicar um número inteiro positivo e um número negativo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5, -6)).to eq -30
+    end
+
+    it('Deve multiplicar um número inteiros positivos e 0.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5, 0)).to eq 0
+    end
+
+    it('Deve multiplicar um número negativo com 0.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(-5, 0)).to eq 0
+    end
+
+    it('Deve multiplicar 0 com 0.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(0, 0)).to eq 0
+    end
+
+    it('Deve multiplicar um número inteiro positivo e um número decimal positivo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5, 6.5)).to eq 32.5
+    end
+
+    it('Deve multiplicar um número negativo e um número decimail positivo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(-5, 6.5)).to eq -32.5
+    end
+
+    it('Deve multiplicar 0 e um número decimal positivo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(0, 6.5)).to eq 0
+    end
+
+    it('Deve multiplicar dois números decimais positivos.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5.0, 6.5)).to eq 32.5
+    end
+
+    it('Deve multiplicar um número inteiro positivo e um número decimal negativo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5, -6.5)).to eq -32.5
+    end
+
+    it('Deve multiplicar um número negativo e um número decimail negativo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(-5, -6.5)).to eq 32.5
+    end
+
+    it('Deve multiplicar 0 e um número decimal negativo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(0, -6.5)).to eq 0
+    end
+
+    it('Deve multiplicar um número decimal positivo e um número decimail negativo.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(5.0, -6.5)).to eq -32.5
+    end
+
+    it('Deve multiplicar dois números decimais negativos.')do
+        calculadora = Calculadora.new
+        expect(calculadora.multiplicacao(-5.0, -6.5)).to eq 32.5
+    end
 end
