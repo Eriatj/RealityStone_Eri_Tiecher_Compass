@@ -13,10 +13,13 @@ class Calculadora
     end
 
     def divisao(a, b)
-        a / b 
+        if b == 0
+            return 'É impossivel dividir um número por 0'
+        end
+        if (a / b) != 0 
+            return(a/b).round(2)
+        end
+        a / b
     end
 
-    def potencia(a, b)
-        a ** b
-    end
 end
